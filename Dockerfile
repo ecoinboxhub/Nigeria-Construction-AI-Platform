@@ -11,9 +11,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+RUN mkdir -p data/raw data/processed artifacts/models artifacts/chroma
 COPY backend ./backend
 COPY data_pipeline ./data_pipeline
-COPY data ./data
 COPY .env.example ./.env.example
 COPY alembic.ini ./alembic.ini
 

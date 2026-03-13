@@ -1,0 +1,14 @@
+# Ignore git and environments
+.git
+.venv
+__pycache__
+*.pyc
+.env
+.tmp
+.virtualenv
+z.txt
+
+# Do not copy artifacts/data as we create empty ones in Dockerfile
+artifacts/
+data/raw/
+data/processed/
