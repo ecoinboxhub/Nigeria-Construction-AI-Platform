@@ -94,6 +94,17 @@ async def request_metrics_and_audit(request: Request, call_next):
 app.include_router(api_router, prefix=settings.api_prefix)
 
 
+@app.get("/")
+def welcome_root():
+    return {
+        "message": f"Welcome to the {settings.app_name}",
+        "version": app.version,
+        "status": "online",
+        "documentation": "/docs",
+        "health_check": "/health"
+    }
+
+
 @app.get("/health")
 def root_health():
     return {"status": "ok"}
