@@ -6,7 +6,7 @@ import { useMutation } from "@tanstack/react-query";
 import api from "@/lib/api";
 import { 
   Calculator, 
-  Drip, 
+  Target, 
   MapPin, 
   Layers, 
   TrendingUp,
